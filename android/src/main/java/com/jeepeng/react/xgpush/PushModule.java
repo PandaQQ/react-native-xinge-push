@@ -50,7 +50,7 @@ public class PushModule extends ReactContextBaseJavaModule implements ActivityEv
         this.reactContext = reactContext;
         registerReceivers();
 
-        XGPushManager.registerPush(this.reactContext);
+        XGPushConfig.enableOtherPush(this.reactContext, true);
 
         // Handle MI PUSH CONFIG
         ////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ public class PushModule extends ReactContextBaseJavaModule implements ActivityEv
 
         XGPushConfig.enableFcmPush(this.reactContext, true);
         XGPushConfig.setHuaweiDebug(true);
-        XGPushConfig.enableOtherPush(this.reactContext, true);
+        XGPushManager.registerPush(this.reactContext);
 
     }
 
