@@ -1,3 +1,6 @@
+## 信鸽推送服务应该会在2020年10月31号之前停止免费服务，故 react-native-xinge-push 应该也不会再有维护。谢谢大家的支持～
+
+
 ## 版本对照表
 react-native-xinge-push | 信鸽SDK（Android） | 信鸽SDK（iOS）
 ---|---|---
