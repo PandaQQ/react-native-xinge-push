@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.dependency 'React'
   s.vendored_libraries = "ios/libXG-SDK.a"
   s.requires_arc = true
-  s.frameworks = 'SystemConfiguration','CoreTelephony', 'UserNotifications.framework'
+  s.frameworks = 'SystemConfiguration','CoreTelephony', 'UserNotifications'
   s.library = 'sqlite3','c++','z'
   # spec.public_header_files = "Classes/**/*.h"
 
