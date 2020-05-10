@@ -48,6 +48,11 @@ public class PushModule extends ReactContextBaseJavaModule implements ActivityEv
         reactContext.addActivityEventListener(this);
         reactContext.addLifecycleEventListener(this);
         this.reactContext = reactContext;
+
+    }
+
+    public void StartService () {
+        
         registerReceivers();
 
         XGPushConfig.enableFcmPush(this.reactContext, true);
@@ -58,7 +63,7 @@ public class PushModule extends ReactContextBaseJavaModule implements ActivityEv
         ////////////////////////////////////////////////////
         ////////////////////////////////////////////////////
         try {
-            ApplicationInfo appInfo = reactContext.getPackageManager().getApplicationInfo(reactContext.getPackageName(),
+            ApplicationInfo appInfo = this.reactContext.getPackageManager().getApplicationInfo(this.reactContext.getPackageName(),
                     PackageManager.GET_META_DATA);
 
             XM_ACCESS_ID = appInfo.metaData.getString("MY_XM_XG_ID");
@@ -77,11 +82,10 @@ public class PushModule extends ReactContextBaseJavaModule implements ActivityEv
         }
         ////////////////////////////////////////////////////
         ////////////////////////////////////////////////////
-
         XGPushManager.registerPush(this.reactContext);
-
     }
-
+    
+    
     @Override
     public String getName() {
         return MODULE_NAME;
