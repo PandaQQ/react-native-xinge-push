@@ -39,7 +39,7 @@ dependencies {
 //    compile 'com.tencent.xinge:xgmz:3.2.4-beta'
     //增加以下依赖
 
-    implementation 'com.tencent.xinge:xinge:4.3.5-release'
+    implementation 'com.tencent.xinge:xinge:4.3.7-release'
     implementation  'com.tencent.wup:wup:1.0.0.E-Release'
     implementation 'com.tencent.jg:jg:1.1'
     implementation 'com.tencent.mid:mid:4.0.7-Release'
@@ -49,6 +49,7 @@ dependencies {
     //fcm通道需要增加以下依赖并将google-services.json放进你应用model的根路径下。
     implementation 'com.tencent.xinge:fcm:4.3.2-release'
     implementation 'com.google.firebase:firebase-messaging:17.3.1'
+    apply plugin: 'com.google.gms.google-services'
 
 
 }
